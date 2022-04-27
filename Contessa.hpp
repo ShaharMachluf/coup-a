@@ -3,6 +3,8 @@
 
 namespace coup{
     class Contessa:public Player{
-        void block();
+        public:
+        Contessa(Game g, string n);
+        void block(Player player);
     };
 };

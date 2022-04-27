@@ -3,5 +3,6 @@
 #include "Contessa.hpp"
 
 namespace coup{
-    void Contessa::block(){}
+    Contessa::Contessa(Game g, string n):Player(g,n){}
+    void Contessa::block(Player player){}
 };

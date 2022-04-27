@@ -1,9 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "Player.hpp"
+#include "Game.hpp"
 
 using namespace std;
-using std::vector;
 
 namespace coup{
     Game::Game():curr_turn(NULL), game_winner(NULL){}
