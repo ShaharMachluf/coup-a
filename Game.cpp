@@ -5,7 +5,11 @@
 using namespace std;
 
 namespace coup{
-    Game::Game():curr_turn(NULL), game_winner(NULL){}
+    Game::Game(){}
+    vector <string> Game::players(){
+        vector<string> vec = {"hi"};
+        return vec;
+    }
     string Game::turn(){return "hi";}
     string Game::winner(){return "hi";}
 };

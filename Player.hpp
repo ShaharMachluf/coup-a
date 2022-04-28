@@ -1,19 +1,23 @@
+#pragma once
 #include <iostream>
 #include "Game.hpp"
 
+using namespace std;
+
 namespace coup{
     class Player{
+        protected:
         string name;
-        string role;
-        Game game;
+        string player_role;
+        Game *game;
         int money;
         public:
-        Player(Game g, string n);
+        Player(Game &g, string n);
         void income();
         void foreign_aid();
         virtual void coup(Player player);
         string role();
-        string coins();
+        int coins();
         virtual void block(Player player);
         ~Player();
     };
