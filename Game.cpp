@@ -7,7 +7,7 @@ using namespace std;
 namespace coup{
     Game::Game(){}
     vector <string> Game::players(){
-        vector<string> vec = {"hi"};
+        vector<string> vec = {"hi", "hi", "hi", "hi", "hi"};
         return vec;
     }
     string Game::turn(){return "hi";}
