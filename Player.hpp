@@ -5,6 +5,7 @@
 using namespace std;
 
 namespace coup{
+    class Game;
     class Player{
         protected:
         string name;

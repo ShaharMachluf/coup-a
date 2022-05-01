@@ -6,17 +6,18 @@
 using namespace std; 
 
 namespace coup{
+    class Player;
     class Game{
         vector <string> player_list;
-        vector <coup::Player> Player_obj_list;
+        vector <Player*> Player_obj_list;
         unsigned int curr_turn;
         string game_winner;
         string last_out;
-        int last_i_out;
+        unsigned int last_i_out;
         public:
         Game();
         vector <string> players();
-        vector <coup::Player> get_players();
+        vector <Player*> get_players();
         string turn();
         void next_turn();
         string winner();

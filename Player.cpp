@@ -52,7 +52,4 @@ namespace coup{
         this->action.at(0) = act;
         this->action.at(1) = done_to;
     }
-    vector <Player> Game::get_players(){
-        return this->Player_obj_list;
-    }
 };

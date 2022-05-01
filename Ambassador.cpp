@@ -22,10 +22,10 @@ namespace coup{
         if(vec.at(0) != "steal"){
             throw("Last action wasn't 'steal'");
         }
-        vector<Player> players = game->get_players();
-        for(int i=0; i<players.size(); i++){
-            if(players.at(i).get_name() == vec.at(1)){
-                players.at(i).add_coins(2);
+        vector<Player*> players = game->get_players();
+        for(unsigned int i=0; i<players.size(); i++){
+            if((*players.at(i)).get_name() == vec.at(1)){
+                (*players.at(i)).add_coins(2);
             }
         }
         player.remove_coins(2);
