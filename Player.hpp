@@ -11,6 +11,8 @@ namespace coup{
         string player_role;
         Game *game;
         int money;
+        vector <string> action;
+        void check_turn();
         public:
         Player(Game &g, string n);
         void income();
@@ -19,6 +21,10 @@ namespace coup{
         string role();
         int coins();
         virtual void block(Player player);
-        ~Player();
+        void add_coins(int num);
+        void remove_coins(int num);
+        string get_name();
+        vector<string> get_last_play();
+        void set_last_play(string act, string done_to);
     };
 };

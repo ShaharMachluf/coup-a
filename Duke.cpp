@@ -3,7 +3,22 @@
 #include "Duke.hpp"
 
 namespace coup{
-    Duke::Duke(Game g, string n):Player(g,n){}
-    void Duke::tax(){}
-    void Duke::block(Player player){}
+    Duke::Duke(Game g, string n):Player(g,n){
+        this->player_role = "Duke";
+    }
+    void Duke::tax(){
+        check_turn();
+        this->money+=3;
+        this->set_last_play("tax", this->name);
+        game->next_turn();
+    }
+    void Duke::block(Player player){
+        check_turn();
+        if(player.get_last_play().at(0)!= "foreign_aid"){
+            throw("can't block this action");
+        }
+        player.remove_coins(2);
+        this->set_last_play("block", player.get_name());
+        game->next_turn();
+    }
 };
